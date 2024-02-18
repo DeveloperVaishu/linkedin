@@ -1,0 +1,633 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0 0 10px gray;
+    padding: 0 100px;
+    position: relative;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav-left{
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.nav-left img{
+    height: 40px;
+    width: 40px;
+}
+
+.nav-left .search-box{
+    display: flex;
+    height: 40px;
+    width: 350px;
+    padding: 6px 6px;
+    border-radius: 40%;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.search-box img{
+    height: 18px;
+    width: 18px;
+}
+
+.search-box input{
+    height: 100%;
+    width: 100%;
+    color: blue;
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    
+}
+
+.nav-middle {
+    height: 100%;
+    width: 800px;
+}
+
+.nav-middle ul{
+    list-style: none;
+    padding: 0 0;
+}
+
+.nav-middle ul li{
+    float: left;
+    display: inline;
+    width: 150px;
+    text-align: left;
+    color: gray;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-middle ul li img{
+    height: 30px;
+    width: 30px;
+    
+}
+
+.nav-middle ul li a{
+    text-decoration: none;
+    color: rgb(55, 53, 53);
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+.nav-middle ul li .slider{
+    height: 3px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 3px;
+}
+
+.nav-middle ul li p{
+    height: 3px;
+    width: 0px;
+    background-color: blue;
+    border-radius: 3px;
+    transition: all 1s;
+}
+
+.nav-middle ul :hover p{
+    width: 100px;
+}
+
+.nav-right{
+    height: 50px;
+    width:40px;
+    position: relative;
+}
+
+.nav-right .online img{
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    cursor:  pointer;
+}
+
+.nav-right .online::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: green;
+    position: absolute;
+    top:0;
+    left: 30px;
+}
+
+ .setting-menu{
+    max-height: 0;
+    width: 340px;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+    top: 65px;
+    right: 100px;
+    overflow: hidden;
+    transition: all 0.7s;
+    z-index: 1;
+}
+
+.profile-menu{
+    padding: 20px 20px;
+    background-color: #222;
+
+}
+ .setMenu{
+    max-height: 400px;
+}
+
+.setting-menu .user-profile{
+    display: flex;
+    height: 60px;
+    width: auto;
+    
+}
+
+.user-profile img{
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+.name{
+    position: relative;
+    margin-left: 20px;
+}
+
+.user-profile .name h4{
+    color: white;
+}
+
+.user-profile .name a{
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top:15px;
+}
+
+.setting-menu hr{
+    height: 3px;
+    background-color: white;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.setting-menu .feedback,.privacy,.help,.display,.logout{
+    height: 55px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.setting-menu .feedback  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .feedback .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .feedback a{
+    text-decoration: none;
+    color: white;
+    margin-left: -80px;
+    font-size: 18px;
+}
+
+.setting-menu .privacy  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .privacy .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .privacy a{
+    text-decoration: none;
+    color: white;
+    margin-left: -70px;
+    font-size: 18px;
+}
+
+.setting-menu .help  .images{height: 40px;
+    width: 40px;
+}
+
+.setting-menu .help .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .help a{
+    text-decoration: none;
+    color: white;
+    margin-left: -80px;
+    font-size: 18px;
+}
+
+.setting-menu .display  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .display .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .display a{
+    text-decoration: none;
+    color: white;
+    margin-left: -20px;
+    font-size: 18px;
+}
+
+.setting-menu .logout  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .logout .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .logout a{
+    text-decoration: none;
+    color: white;
+    margin-left: -150px;
+    font-size: 18px;
+}
+
+/* left-part */
+
+.container{
+    display: flex;
+    position: relative;
+    z-index:1;
+    flex-wrap: wrap;
+    padding: 0 80px;
+
+}
+
+.left-part{
+    flex-basis: 60%;
+    align-self: flex-start;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.user-image{
+    height: 300px;
+    width: 100%;
+    background-image: url(images/cover-pic.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.user-image img{
+    height: 180px;
+    width: 140px;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top: 70%;
+    left: 50px;
+}
+
+.user-info{
+    height: auto;
+    width: auto;
+    margin-top: 90px;
+    margin-left: 70px;
+}
+
+.user-info p{
+    color: gray ;
+}
+
+.user-info a{
+    text-decoration: none;
+    color: blue;
+}
+
+.user-info .mutual{
+    height: auto;
+    width: auto;
+    display: flex;
+    
+}
+.user-info .mutual img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.user-info .mutual font{
+    color:gray;
+    font-size: 18px;
+    margin-left: 10px;
+
+    margin-top: 3px;
+}
+
+.options{
+    display: flex;
+}
+
+.connect{
+    height: 35px;
+    width: 120px;
+    display: flex;
+    background-color: blue;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect img{
+    height: 20px ;
+    width: 20px;
+}
+
+.connect font{
+    color: white;
+}
+
+.message{
+    height: 35px;
+    width: 120px;
+    display: flex;
+    border-radius: 4px;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.message img{
+    height: 20px ;
+    width: 20px;
+}
+
+.message font{
+    color: #222;;
+}
+
+.about{
+    height: auto;
+    width: auto;
+    margin-left: 70px;
+}
+
+.about p{
+    color: gray;
+    font-size: 15px;
+}
+
+.about a{
+    text-decoration: none;
+    color: gray;
+    
+    float: right;
+}
+
+.experience{
+    margin-left: 70px;
+    height: auto;
+    width: auto;
+}
+
+.working{
+    display: flex;
+    justify-content: space-between;
+}
+
+.working img{
+    height: 60px;
+    width: 60px;
+}
+
+.frontEnd{
+    margin-left: 30px;
+}
+
+ .frontEnd p{
+    color: gray;
+    font-size: 15px;
+}
+
+.experience a{
+    text-decoration: none;
+    color: gray;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 250px;
+}
+
+.experience a img{
+    height: 10px;
+    width: 30px;
+}
+
+.education{
+    margin-left: 70px;
+    height: auto;
+    width: auto;
+}
+ 
+.university{
+    display: flex;
+}
+
+.university img{
+    height: 60px;
+    width: 60px;
+}
+
+.college{
+    margin-left: 30px;
+
+}
+
+.college p{
+    font-size: 15px;
+    color: gray;
+}
+
+.skills{
+    margin-left: 70px;
+    height: auto;
+    width: auto;
+}
+
+.skills input{
+    height: 50px;
+    width: auto;
+    padding: 10px 20px;
+    color: gray;
+    border: 2px solid gray;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.languages{
+    margin-left: 70px;
+    height: auto;
+    width: auto;
+}
+
+.languages input{
+    color: gray;
+    border: none;
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+.facilities{
+    width: auto;
+    height: auto;
+}
+
+.facilities font{
+    color: rgb(100, 94, 94);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.reserved{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    
+}
+
+.reserved img{
+    height: 30px;
+    width: 30px;
+}
+
+.reserved font{
+    color: gray;
+    font-size: 15px;
+    margin-top: 10px;
+}
+/* right-part */
+
+.right-part{
+    flex-basis: 25%;
+    max-height: 120%;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    position: sticky;
+    left: 70%;
+    top:80px;
+}
+
+.ad{
+    text-align: right;
+    color: gray;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.brands{
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.brands p{
+    color: gray;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.brands img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.brands input{
+    height: 50px;
+    width: 150px;
+    border: 2px solid blue;
+    border-radius: 50px;
+    color: blue;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.peoples{
+    height: auto;
+    width: auto;
+    display: flex;
+}
+
+.peoples img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.peopleName{
+    margin-left: 10px;
+}
+
+.peopleName h3{
+    color: gray;
+}
+
+.peopleName p{
+    color: gray;
+    font-size: 15px;
+}
+
+.peopleName input{
+    height: 30px;
+    width: 100px;
+    border-radius: 30px;
+    color: gray;
+    border: 2px solid gray;
+    cursor: pointer;
+}

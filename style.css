@@ -1,0 +1,898 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+nav{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0 0 10px gray;
+    padding: 0 100px;
+    position: relative;
+    position: fixed;
+    z-index: 2;
+}
+
+.nav-left{
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.nav-left img{
+    height: 40px;
+    width: 40px;
+}
+
+.nav-left .search-box{
+    display: flex;
+    height: 40px;
+    width: 350px;
+    padding: 6px 6px;
+    border-radius: 40%;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.search-box img{
+    height: 18px;
+    width: 18px;
+}
+
+.search-box input{
+    height: 100%;
+    width: 100%;
+    color: blue;
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    
+}
+
+.nav-middle {
+    height: 100%;
+    width: 800px;
+}
+
+.nav-middle ul{
+    list-style: none;
+    padding: 0 0;
+}
+
+.nav-middle ul li{
+    float: left;
+    display: inline;
+    width: 150px;
+    text-align: left;
+    color: gray;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-middle ul li img{
+    height: 30px;
+    width: 30px;
+    
+}
+
+.nav-middle ul li a{
+    text-decoration: none;
+    color: rgb(55, 53, 53);
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+.nav-middle ul li .slider{
+    height: 3px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 3px;
+}
+
+.nav-middle ul li p{
+    height: 3px;
+    width: 0px;
+    background-color: blue;
+    border-radius: 3px;
+    transition: all 1s;
+}
+
+.nav-middle ul :hover p{
+    width: 100px;
+}
+
+.nav-right{
+    height: 50px;
+    width:40px;
+    position: relative;
+}
+
+.nav-right .online img{
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    cursor:  pointer;
+}
+
+.nav-right .online::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: green;
+    position: absolute;
+    top:0;
+    left: 30px;
+}
+
+ .setting-menu{
+    max-height: 0;
+    width: 340px;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+    top: 65px;
+    right: 100px;
+    overflow: hidden;
+    transition: all 0.7s;
+    z-index: 1;
+}
+
+.profile-menu{
+    padding: 20px 20px;
+    background-color: #222;
+
+}
+ .setMenu{
+    max-height: 400px;
+}
+
+.setting-menu .user-profile{
+    display: flex;
+    height: 60px;
+    width: auto;
+    
+}
+
+.user-profile img{
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+.name{
+    position: relative;
+    margin-left: 20px;
+}
+
+.user-profile .name h4{
+    color: white;
+}
+
+.user-profile .name a{
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top:15px;
+}
+
+.setting-menu hr{
+    height: 3px;
+    background-color: white;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.setting-menu .feedback,.privacy,.help,.display,.logout{
+    height: 55px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.setting-menu .feedback  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .feedback .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .feedback a{
+    text-decoration: none;
+    color: white;
+    margin-left: -80px;
+    font-size: 18px;
+}
+
+.setting-menu .privacy  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .privacy .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .privacy a{
+    text-decoration: none;
+    color: white;
+    margin-left: -70px;
+    font-size: 18px;
+}
+
+.setting-menu .help  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .help .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .help a{
+    text-decoration: none;
+    color: white;
+    margin-left: -80px;
+    font-size: 18px;
+}
+
+.setting-menu .display  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .display .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .display a{
+    text-decoration: none;
+    color: white;
+    margin-left: -20px;
+    font-size: 18px;
+}
+
+.setting-menu .logout  .images{
+    height: 40px;
+    width: 40px;
+}
+
+.setting-menu .logout .arrow{
+    height: 15px;
+    width: 15px;
+}
+
+.setting-menu .logout a{
+    text-decoration: none;
+    color: white;
+    margin-left: -150px;
+    font-size: 18px;
+}
+
+/* left-sidebar */
+.box{
+    display: flex;
+    position: relative;
+    z-index:1;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+.left-sidebar{
+    width: 350px;
+    height: 100%;
+    position: sticky;
+    top:80px;
+
+}
+
+.cover-pic{
+    height: 150px;
+    width: 100%;
+    background-image: url(images/cover-pic.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cover-pic img{
+    height: 90px;
+    width: 80px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top:70%;
+    left: 10%;
+}
+
+.profile-name{
+    height: 30px;
+    width: auto;
+    position: relative;
+    margin-top: 50px;
+    padding: 0 40px;
+}
+
+.profile-name p{
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top:20px;
+}
+
+.profile-status{
+    height: auto;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.profile-status a{
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.profile-status a font{
+    color:blue;
+}
+
+.left-sidebar .hr1{
+    color: gray;
+    margin-top: 16px;
+    width: 80%;
+    margin-left: 40px;
+}
+
+.extras{
+    display: flex;
+    height: auto;
+    width: 80%;
+    margin-left: 40px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.extras .items{
+    display: flex;
+    width: 130px;
+    height: 40px;
+}
+
+.extras .items img{
+    height: 20px;
+    width: 20px;
+}
+
+.extras .items a{
+    text-decoration: none;
+    color: gray;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.extras .premimum{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.extras .premimum img{
+    height: 20px;
+    width: 20px;
+}
+
+.extras .premimum a{
+    text-decoration: none;
+    color: gray;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.extras hr{
+    height: 30px;
+    color: gray;
+    transform: rotate(180deg);
+}
+
+.recent{
+    height: auto;
+    width: 80%;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.recent p{
+    color: gray;
+    font-size: 20px;
+}
+
+.recent ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.recent ul li{
+    display: block;
+    display: flex;
+    
+}
+
+.recent ul li img{
+    height: 25px;
+    width: 25px;
+}
+
+
+.recent ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.groups{
+    height: auto;
+    width: 80%;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.groups p{
+    color: gray;
+    font-size: 20px;
+}
+
+.groups ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.groups ul li{
+    display: block;
+    display: flex;
+    
+}
+
+.groups ul li img{
+    height: 25px;
+    width: 25px;
+}
+
+
+.groups ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.hastags{
+    height: auto;
+    width: 80%;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.hastags p{
+    color: gray;
+    font-size: 20px;
+}
+
+.hastags ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.hastags ul li{
+    display: block;
+    display: flex;
+    
+}
+
+.hastags ul li img{
+    height: 25px;
+    width: 25px;
+}
+
+
+.hastags ul li a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.discover{
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.discover a{
+    text-decoration: none;
+    color: blue;
+    font-size: 17px;
+}
+
+/* right-sidebar */
+
+
+.right-sidebar{
+    width: 350px;
+    height: 100%;
+    position: sticky;
+    top:60px;
+}
+
+.trending{
+    height: 40px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.trending img{
+    height: 20px;
+    width: 20px;
+}
+
+.news{
+    height: auto;
+    width: 100%;
+}
+
+.news ul{
+    list-style: none;
+}
+
+.news ul li{
+    display: block;
+    padding: 5px 0;
+}
+
+.news ul li p{
+    color: gray;
+    font-size: 13px;
+}
+
+.news a{
+    text-decoration: none;
+    font-size: 17px;
+    color: blue;
+}
+
+.ad{
+    text-align: right;
+    color: gray;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.brands{
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.brands p{
+    color: gray;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.brands img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.brands input{
+    height: 50px;
+    width: 150px;
+    border: 2px solid blue;
+    border-radius: 50px;
+    color: blue;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.facilities{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.facilities font{
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.reserved{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.reserved img{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+
+.reserved font{
+    color: gray;
+    font-size: 15px;
+
+}
+
+/* Middle-part */
+
+
+.middle-part{
+    width: 620px;
+    
+    
+}
+
+.write-post{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.write-post img{
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.write-post input{
+    height: 40px;
+    width: 400px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+}
+
+.middle-part .hr2{
+    width: 100%;
+}
+
+.options{
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.options a{
+    text-decoration: none;
+    color: gray;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+}
+
+.options a:last-child{
+    background-color: rgb(22, 22, 251);
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.options a img{
+    height: 20px;
+    width: 20px;
+}
+
+.options hr{
+    height: 50px;
+    color: gray;
+    transform: rotate(180deg);
+    
+}
+
+.hr3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.hr3 hr{
+    width: 80%;
+    margin-top: 6px;
+}
+
+.hr3 font{
+    font-size: 15px;
+    color: gray;
+}
+
+.hr3 h4{
+    font-size: 15px;
+    color: #222;
+}
+
+.hr3 img{
+    height: 10px;
+    width: 15px;
+    
+}
+
+.posts{
+    width: 100%;
+    height: auto;
+}
+
+.posts .post1{
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.posts .post1 .img1{
+    height: 60px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.posts .post1 .name1{
+    height: 80px;
+    margin-left: 10px;
+}
+
+.posts .post1 .name1 font{
+    color: gray;
+    display: block;
+    font-size: 14px;
+}
+
+.posts p{
+    color: gray;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.posts .post-image{
+    height: 450px;
+    width: 100%;
+}
+
+.followers{
+    width: 100%;
+    height: 20px;
+    display: flex;
+}
+
+.img-likes{
+    position: relative;
+}
+
+.img-likes img{
+    height: 15px;
+    width: 15px;
+}
+
+.img-likes #like{
+    z-index: 1;
+}
+
+.img-likes #love{
+    z-index: 2;
+    position: absolute;
+    left: 7px;
+}
+
+.img-likes #clap{
+    z-index: 3;
+    position: absolute;
+    left: 17px
+}
+
+.follower-name{
+    font-size: 13px;
+    color: gray;
+    margin-left: 20px;
+    height: auto;
+    width: auto;
+}
+
+.comnt{
+    height: auto;
+    width: auto;
+    font-size: 13px;
+    color: gray;
+    margin-left: 220px;
+}
+
+.share{
+    height: auto;
+    width: auto;
+    font-size: 13px;
+    color: gray;
+    margin-left: 20px;
+}
+
+.followers-1{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-user{
+    display: flex;
+}
+
+.img-user img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.img-user img:last-child{
+    height: 8px;
+    width: 18px;
+    margin-top: 7px;
+    margin-left: 7px;
+
+}
+
+.followers-1 a{
+    text-decoration: none;
+    color: gray;
+    display: flex;
+}
+
+.followers-1 a img{
+    height: 20px;
+    width: 20px;
+
+}
+
+.followers-1 a font{
+    color: 15px;
+    margin-left: 10px;
+}
